@@ -1,0 +1,63 @@
+.listscreen{
+   margin-top: 100px;
+  
+}
+.box{  
+    width: 80%;
+    background-color: white;
+    box-shadow: 5px 10px 30px rgb(182, 176, 176);
+    border-radius: 3px;
+    padding: 10px;
+    padding-bottom: 25px;
+    transition: all.5s ease;
+margin-bottom: 150px;
+}
+.boxcat{
+    height: auto;
+    width: 100%;
+    
+}
+.boxshadow{
+    padding: 12px;
+    background-color: aliceblue;
+    border-bottom: 1px solid #262626;
+    width: 80%;
+}
+.boxshadow2{
+    padding: 12px;
+    background-color: rgb(245, 255, 240);
+    border-bottom: 1px solid #262626;
+    width: 80%;
+}
+.disable{
+    height: 0;
+   
+    display: none;
+    transition: all.5s ease ;
+
+}
+.list_cat_box{
+   width: 97%;
+   text-align: right;
+   margin-bottom: 20px;
+}
+.heade{
+    padding: 10px 20px 10px 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #262626;
+
+}
+
+.names{
+    padding: 20px;
+    text-align: right;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.namesnobtn{
+    text-align: center;
+}
