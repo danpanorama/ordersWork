@@ -29,9 +29,9 @@ function ListScreen() {
   function increament(e){
    if(e.target.title){
     let json = JSON.parse(e.target.title)
-    
+     dispatch(amountset(json))
     dispatch(addProduct(json))
-    dispatch(amountset(json))
+   
 
    }
   }
@@ -39,8 +39,9 @@ function ListScreen() {
   function decreament(e){
     if(e.target.title){
         let json = JSON.parse(e.target.title)
-     dispatch(delProduct(json))
-     dispatch(amountdown(json))
+      dispatch(amountdown(json))
+        dispatch(delProduct(json))
+    
 
     }
    }
@@ -48,7 +49,11 @@ function ListScreen() {
    function addargaaaaz(e){
     if(e.target.title){
         let json = JSON.parse(e.target.title)
+        json.boxes = json.boxes+1
      dispatch(addargaz(json))
+
+
+
     }
    }
 

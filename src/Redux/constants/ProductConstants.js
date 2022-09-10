@@ -9,3 +9,10 @@ export const AMOUNT = "AMOUNT";
 
 
 export const DOWNAMOUNT = "DOWNAMOUNT";
+
+export const ADD_ARGAZ = "ADD_ARGAZ";
+
+
+export const DEL_ARGAZ = "DEL_ARGAZ";
+
+

@@ -3,7 +3,7 @@ import * as actionTypes from "../constants/WorkerConstant";
 const initialState = {
   orderItems: [],
   loading: false,
-  boss:"",
+  boss: "",
 
 };
 
@@ -21,7 +21,7 @@ const worders = (state = initialState, action) => {
       if (action.data) {
         for (let i = 0; i < add.orderItems.length; i++) {
           if (add.orderItems[i].name == action.data.name) {
-            console.log(add.orderItems[i])
+            
             add.orderItems[i].amount =
               add.orderItems[i].amount + 1;
             flag = true;
@@ -29,12 +29,14 @@ const worders = (state = initialState, action) => {
         }
         if (!flag) {
 
-
+action.data.amount = action.data.amount+1
           add.orderItems = [...add.orderItems, action.data];
+
         }
       }
       let safeReload = JSON.stringify(add.orderItems);
       localStorage.setItem("order1", safeReload);
+      console.log(add)
 
 
       return add;
@@ -85,7 +87,7 @@ const worders = (state = initialState, action) => {
 
       for (let i = 0; i < argax.orderItems.length; i++) {
         if (argax.orderItems[i].name == action.data.name) {
-          argax.orderItems[i].box = argax.orderItems[i].box + 1
+          argax.orderItems[i].boxes = argax.orderItems[i].boxes + 1
 
         }
       }
@@ -99,7 +101,7 @@ const worders = (state = initialState, action) => {
       };
       for (let i = 0; i < delargax.orderItems.length; i++) {
         if (delargax.orderItems[i].name == action.data.name) {
-          delargax.orderItems[i].box = delargax.orderItems[i].box - 1
+          delargax.orderItems[i].boxes = delargax.orderItems[i].boxes - 1
 
         }
       }
@@ -108,24 +110,24 @@ const worders = (state = initialState, action) => {
       return delargax;
 
 
-      case actionTypes.BOSS:
-        const boss = {
-          ...state,
-        };
-      
-  boss.boss = action.data
-  
-        return boss;
+    case actionTypes.BOSS:
+      const boss = {
+        ...state,
+      };
+
+      boss.boss = action.data
+
+      return boss;
 
 
-      case actionTypes.SETEFFECT:
-            const set = {
-              ...state,
-            };
+    case actionTypes.SETEFFECT:
+      const set = {
+        ...state,
+      };
 
-            set.orderItems = action.data
+      set.orderItems = action.data
 
-            return set;
+      return set;
 
 
     default:

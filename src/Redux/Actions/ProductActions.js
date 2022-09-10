@@ -2,7 +2,6 @@ import {PRODUCT_FAIL,SET_PRODUCT_LIST,ADD_ITEM,DEL_ITEM,REQUEST_DATA,AMOUNT,DOWN
 
 export const listProduct = (data) => async (dispatch)=>{
     try{
-        console.log(data)
         dispatch({type:REQUEST_DATA})
         dispatch({type:SET_PRODUCT_LIST,data:data})
 
@@ -17,7 +16,6 @@ export const listProduct = (data) => async (dispatch)=>{
 
 export const amountset = (data) => async (dispatch)=>{
     try{
-        console.log(data,"::::::")
         dispatch({type:AMOUNT,data:data});
 
     }catch(e){

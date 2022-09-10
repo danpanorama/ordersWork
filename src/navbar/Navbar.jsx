@@ -20,13 +20,11 @@ function Navbar(props) {
     <div className="gagaga">
       
  <div className="margintop">
- {workerlist.orderItems && workerlist.orderItems.length > 0?  workerlist.orderItems.map((e)=>{
-        return(
+     
           <div className="ma">
             <ListSof list={workerlist}/>
           </div>
-        )
-      }):""}
+   
  </div>
     </div>
     </div>

@@ -20,7 +20,7 @@ const products = (state = initialState, action) => {
             return add;
 
             case actionTypes.AMOUNT:
-                const amount = {
+                const amount = { 
                     ...state,
                 };
                 for (let i = 0; i < amount.item.length; i++) {
@@ -41,14 +41,51 @@ const products = (state = initialState, action) => {
                     };
                     for (let i = 0; i < sown.item.length; i++) {
                         if (sown.item[i].name == action.data.name) {
-                          
-                            sown.item[i].amount =
+                            if(sown.item[i].amount > 0){
+                                 sown.item[i].amount =
                             sown.item[i].amount - 1;
+                            }else{
+                                return sown
+                            }
+                          
+                           
                          
                         }
                       }
         
                     return sown;
+
+
+
+                    
+    case actionTypes.ADD_ARGAZ:
+        const argax = {
+          ...state,
+        };
+  
+        for (let i = 0; i < argax.orderItems.length; i++) {
+          if (argax.orderItems[i].name == action.data.name) {
+            argax.orderItems[i].boxes = argax.orderItems[i].boxes + 1
+  
+          }
+        }
+  
+        console.log(argax)
+        return argax;
+  
+      case actionTypes.DEL_ARGAZ:
+        const delargax = {
+          ...state,
+        };
+        for (let i = 0; i < delargax.orderItems.length; i++) {
+          if (delargax.orderItems[i].name == action.data.name) {
+            delargax.orderItems[i].boxes = delargax.orderItems[i].boxes - 1
+  
+          }
+        }
+  
+  
+        return delargax;
 
         case actionTypes.DEL_ITEM:
             const del = {

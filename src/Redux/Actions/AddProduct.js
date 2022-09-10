@@ -2,7 +2,6 @@ import {PRODUCT_FAIL,ADD_ORDER,DEL_ORDER,ADD_ARGAZ,BOSS, SETEFFECT} from '../con
 
 export const addProduct = (data) => async (dispatch)=>{
     try{
-        console.log(data)
 
         
 
@@ -35,7 +34,6 @@ export const delProduct = (data) => async (dispatch)=>{
 
 export const addargaz = (data) => async (dispatch)=>{
     try{
-        console.log(data)
 
         
 
@@ -52,7 +50,6 @@ export const addargaz = (data) => async (dispatch)=>{
 
 export const addboss = (data) => async (dispatch)=>{
     try{
-        console.log(data)
 
         dispatch({type:BOSS,data:data});
         

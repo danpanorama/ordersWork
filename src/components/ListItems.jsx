@@ -21,17 +21,9 @@ function ListItems(props) {
             if (e.cat == props.cat) {
               return (
                 <div className="boxshadow flexrow  between" >
-                  {work.orderItems && work.orderItems.length >0? 
-                
-                work.orderItems.map((ele)=>{
-                 if(ele.name == e.name){
-                  return(
-                    <div className="">X</div>
-                  )
-                 }
-                })
-                :""}
+              
                   <div className="amount">
+                    
                     <button
                     className="plusbtn"
                       title={JSON.stringify(e)}
@@ -47,11 +39,21 @@ function ListItems(props) {
                     >
                       -
                     </button>
-                    {/* {e.isbox == true ? 
-                    <button onClick={props.addargaaaaz} title={JSON.stringify(e)} className="btnin">ארגז</button>
-                  :""} */}
+                    {e.isbox == true ? 
+                    <button onClick={props.addargaaaaz} title={JSON.stringify(e)} className="btnin">ארגז {e.boxes}</button>
+                  :""}
                     {" "}
                   </div>
+                  {work.orderItems && work.orderItems.length >0? 
+                
+                work.orderItems.map((ele)=>{
+                 if(ele.name == e.name){
+                  return(
+                    <div className="">בתוך הרשימה</div>
+                  )
+                 }
+                })
+                :""}
                   <div>{e.name} </div>
                 </div>
               );

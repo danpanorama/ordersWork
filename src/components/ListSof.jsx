@@ -29,9 +29,9 @@ function ListSof(props) {
                     >
                       -
                     </button>
-                    {/* {e.isbox == true ? 
-                    <button onClick={props.addargaaaaz} title={JSON.stringify(e)} className="btnin">ארגז</button>
-                  :""} */}
+                    {e.isbox == true ? 
+                    <p >ארגז {e.boxes}</p>
+                  :""}
                     {" "}
                   </div>
                   <div>{e.name} </div>
